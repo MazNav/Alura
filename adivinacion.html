@@ -14,12 +14,12 @@
     };
     var numeroMaximo = parseInt(prompt("Ingrese el número máximo de sorteo"))
     var numeroPensado = Math.round(Math.random()*numeroMaximo);
-    var intentos = 3;
+    var intentos = 1;
 
-    while (intentos > 0) {
+    while (intentos <= 3) {
         var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y "+ numeroMaximo));
         if (numeroPensado == numeroLanzado) {
-            imprimir ("¡Usted acertó! El número era: " +numeroPensado);
+            imprimir ("¡Usted acertó! En " intentos  " intentos. El número era: " +numeroPensado);
             break
         } else if (numeroPensado < numeroLanzado) {
             alert ("Usted erró el número es menor");
@@ -29,8 +29,10 @@
         
         }
     intentos--;
+
         if (intentos == 0) {
             imprimir("Mal, el número era: " + numeroPensado);
+
         }
 
     }
