@@ -19,7 +19,7 @@
     while (intentos <= 3) {
         var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y "+ numeroMaximo));
         if (numeroPensado == numeroLanzado) {
-            imprimir ("¡Usted acertó! En " intentos  " intentos. El número era: " +numeroPensado);
+            imprimir ("¡Usted acertó! En " + intentos +  " intentos. El número era: " +numeroPensado);
             break
         } else if (numeroPensado < numeroLanzado) {
             alert ("Usted erró el número es menor");
@@ -28,9 +28,9 @@
             alert ("Usted erró el número es mayor");
         
         }
-    intentos--;
+    intentos++;
 
-        if (intentos == 0) {
+        if (intentos > 3) {
             imprimir("Mal, el número era: " + numeroPensado);
 
         }
