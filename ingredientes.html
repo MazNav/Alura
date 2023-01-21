@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>Recetas de Armando</h1>
+
+<script>
+
+    var ingredientes = [];
+    var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+    var contador = 1;
+
+    while(contador <= cantidad) {
+        var ingrediente = prompt("Informe el ingrediente " + contador);
+        var ingredienteRepetido = false;
+        for (a = 0; a < ingredientes.length; a++){
+            if (ingrediente == ingredientes[a]){
+                ingredienteRepetido = true;
+                alert("Ingrediente repetido");
+                break
+            }
+        }
+        if (ingredienteRepetido == false) {
+            ingredientes.push(ingrediente);
+            contador++;
+        } else {
+            ingredienteRepetido = false;
+        }
+
+    }
+
+    console.log(ingredientes);
+
+</script>

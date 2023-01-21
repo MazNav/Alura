@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<h2>  Calcular tablas </h2>
+<script>
+    const saltoLinea = "<br>";
+
+    function saltarLinea() {
+        document.write(saltoLinea);
+    };
+
+    function imprimir (mensaje) {
+        document.write(mensaje);
+        saltarLinea();
+    };
+
+    var numero = parseInt(prompt("Número a multiplicar"));
+    var multiplicador = 0;
+    var maximoTabla = parseInt(prompt("Ingrese multiplicador máximo"));
+
+    while (multiplicador <= maximoTabla) {
+        imprimir(numero + " veces " + multiplicador + " es igual a " + (numero * multiplicador));
+        multiplicador++;
+    }
+
+    for (multi = 0; multi <= maximoTabla; multi++) {
+        imprimir(numero + " veces " + multi + " es igual a " + (numero * multi));
+    }
+
+
+
+</script>

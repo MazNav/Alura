@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<h2>  Años mundialistas </h2>
+<script>
+    const saltoLinea = "<br>";
+
+    function saltarLinea() {
+        document.write(saltoLinea);
+    };
+
+    function imprimir (mensaje) {
+        document.write(mensaje);
+        saltarLinea();
+    };
+    var anhoActual = 2022
+    var anhoMundial = 1930
+
+    while  (anhoMundial <= anhoActual) {
+        if  (anhoMundial > 1934 && anhoMundial < 1950){
+     anhoMundial = 1950;
+        } else {
+            imprimir (anhoMundial);
+         anhoMundial = anhoMundial + 4;
+        }
+    }
+
+</script>

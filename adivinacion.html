@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<h2>  Adivinación </h2>
+<script>
+    const saltoLinea = "<br><br>";
+
+    function saltarLinea() {
+        document.write(saltoLinea);
+    };
+
+    function imprimir (mensaje) {
+        document.write(mensaje);
+        saltarLinea();
+    };
+    var numeroMaximo = parseInt(prompt("Ingrese el número máximo de sorteo"))
+    var numeroPensado = Math.round(Math.random()*numeroMaximo);
+    var intentos = 3;
+
+    while (intentos > 0) {
+        var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y "+ numeroMaximo));
+        if (numeroPensado == numeroLanzado) {
+            imprimir ("¡Usted acertó! El número era: " +numeroPensado);
+            break
+        } else if (numeroPensado < numeroLanzado) {
+            alert ("Usted erró el número es menor");
+        
+        } else {
+            alert ("Usted erró el número es mayor");
+        
+        }
+    intentos--;
+        if (intentos == 0) {
+            imprimir("Usted no acertó, el número era: " + numeroPensado);
+        }
+
+    }
+
+
+
+</script>
